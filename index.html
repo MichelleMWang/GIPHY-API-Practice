@@ -7,24 +7,6 @@
 <body>
   <div class="divy"></div>
   <img src="#">
-  <script>
-      const body = document.querySelector('.divy'); 
-      const img = document.querySelector('img'); 
-      
-      const button = document.createElement('button'); 
-      button.textContent = 'Generate Beauty'; 
-      button.addEventListener('click', getImg); 
-      body.appendChild(button); 
-      
-      function getImg(){
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=1zWRr6dUhlB0i4bgfzc0GW7vOBUwuuTH&s=cats%27', {mode:'cors'})
-          .then(function(response){
-              return response.json(); 
-          })
-          .then(function(reponse){
-              img.src = reponse.data.images.original.url; 
-          }); 
-        }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
