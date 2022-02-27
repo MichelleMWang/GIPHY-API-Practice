@@ -17,13 +17,14 @@ body.appendChild(button);
 function getImg(text){
     fetch(`https://api.giphy.com/v1/gifs/translate?api_key=1zWRr6dUhlB0i4bgfzc0GW7vOBUwuuTH&s=${text}%27`, {mode:'cors'})
         .then(function(response){
-            console.log(response); 
             return response.json(); 
         })
         .then(function(reponse){
             img.src = reponse.data.images.original.url; 
         })
         .catch(() => {
+            const error = document.createElement('div'); 
+            error.textContent = 'We couldn\'t find beauty for that search term. Try another'; 
             console.log('not found'); 
         })
         ; 
