@@ -3,6 +3,7 @@ const img = document.querySelector('img');
 
 const textBox = document.createElement('input'); 
 textBox.type = 'text'; 
+textBox.placeholder = 'Search for Beauty'; 
 body.appendChild(textBox); 
 
 const button = document.createElement('button'); 
